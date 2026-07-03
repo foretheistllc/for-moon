@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Moon 🌙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #fff0f5 0%, #ffe4ef 50%, #ffd6e7 100%);
+      min-height: 100vh;
+      color: #5a3040;
+    }
+
+    /* Floating hearts */
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      bottom: -60px;
+      font-size: 1.4rem;
+      animation: floatUp linear infinite;
+      opacity: 0;
+    }
+    @keyframes floatUp {
+      0%   { transform: translateY(0) scale(1);   opacity: 0.7; }
+      100% { transform: translateY(-110vh) scale(0.4); opacity: 0; }
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+    header .moon-emoji { font-size: 3.8rem; display: block; margin-bottom: 12px; animation: glow 3s ease-in-out infinite; }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 12px #ffb6d9, 0 0 30px #ff85b3; }
+      50%       { text-shadow: 0 0 24px #ff85b3, 0 0 60px #ff4d94; }
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 600;
+      color: #c2185b;
+      letter-spacing: 1px;
+    }
+    header p.subtitle {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #ad6080;
+      letter-spacing: 0.5px;
+    }
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #f48fb1, #c2185b, #f48fb1);
+      border-radius: 2px;
+      margin: 22px auto 0;
+    }
+
+    /* ── GRID ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 182, 217, 0.45);
+      border-radius: 24px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(194, 24, 91, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 44px rgba(194, 24, 91, 0.16);
+    }
+    .card .icon {
+      font-size: 2.6rem;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: #c2185b;
+      margin-bottom: 12px;
+    }
+    .card p {
+      font-size: 0.97rem;
+      line-height: 1.75;
+      color: #7b4f62;
+      font-weight: 300;
+    }
+
+    /* wide card */
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 20px 50px;
+      font-size: 0.88rem;
+      color: #b07090;
+      font-weight: 300;
+    }
+    footer span { color: #e91e8c; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="hearts" id="hearts"></div>
+
+  <!-- Header -->
+  <header>
+    <span class="moon-emoji">🌙</span>
+    <h1>For Moon</h1>
+    <p class="subtitle">A little corner of the internet, just for you</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- Cards -->
+  <main>
+
+    <div class="card">
+      <span class="icon">🌸</span>
+      <h2>You Are My Favourite</h2>
+      <p>Out of every star in the sky, every song ever written, and every dream I've ever had — you are still my very favourite thing.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">✨</span>
+      <h2>What I Love About You</h2>
+      <p>Your laugh. The way you care. How you make ordinary moments feel like magic. There's nobody quite like you, Moon.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">🌙</span>
+      <h2>Why Moon?</h2>
+      <p>Because you light up the darkest nights without even trying. Gentle, radiant, and endlessly beautiful — just like the moon.</p>
+    </div>
+
+    <div class="card">
+      <span class="icon">💌</span>
+      <h2>A Note From Yankee</h2>
+      <p>Every day with you is a gift I never take for granted. Thank you for being you, for letting me be yours, and for making life so wonderfully bright. I love you.</p>
+    </div>
+
+    <div class="card wide">
+      <span class="icon">🌹</span>
+      <h2>Always & Forever</h2>
+      <p>No matter where we are or what the world looks like — I choose you. Today, tomorrow, and every day after. This little page is just a tiny piece of all the love I have for you. 💕</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Made with <span>♥</span> by Yankee, for Moon 🌙
+  </footer>
+
+  <script>
+    // Generate floating hearts
+    const container = document.getElementById('hearts');
+    const emojis = ['💕','🌸','✨','💗','🌷','💖','🩷','🌙'];
+    for (let i = 0; i < 22; i++) {
+      const h = document.createElement('span');
+      h.classList.add('heart');
+      h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = (0.9 + Math.random() * 1.4) + 'rem';
+      h.style.animationDuration = (8 + Math.random() * 14) + 's';
+      h.style.animationDelay = (Math.random() * 12) + 's';
+      container.appendChild(h);
+    }
+  </script>
+
+</body>
+</html>
